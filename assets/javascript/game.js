@@ -22,23 +22,27 @@ $(document).ready(function(){
 // Button1 when clicked generates a number between 1-12
 $(".basketball").on("click",function(){
 var boxoneguess = [(Math.floor(Math.random()* 12))+1];
-
 box1Number.push(boxoneguess)
 tally +=  + boxoneguess;
 console.log(tally);
+console.log(boxoneguess);
 $("#score").text(box1Number);
 })
-
 // Button2 when clicked generates a number between 1-12
 $(".steph").on("click",function(){
     var boxtwoguess =[(Math.floor(Math.random()* 12))+1];
     box2Number.push(boxtwoguess);
+    tally +=  + boxtwoguess;
+    console.log(tally);
     console.log(boxtwoguess);
     $("#score").text(boxtwoguess);
 })
+
+
 // Button3 when clicked generates a number between 1-12
 $(".leonard").on("click",function(){
     var boxthreeguess =[(Math.floor(Math.random()* 12))+1];
+    tally +=  + boxthreeguess;
     box3Number.push(boxthreeguess);
     $("#score").text(boxthreeguess);
 })
@@ -52,7 +56,6 @@ $(".klay").on("click",function(){
 
 
 
-console.log(tally); 
 // console.log(boxoneguess); 
 // console.log(boxtwoguess);
 
