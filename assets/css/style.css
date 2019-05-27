@@ -1,7 +1,35 @@
 body{
     background-color: black;
+    position: relative;
 }
 p{
     color:white;
     font-size: 30px;
+}
+.container{
+   border: 2px solid red;
+}
+.basketball{
+    height: 300px;
+    width: 300px;
+    position: absolute;
+    left: 70%;
+}
+.steph{
+    height: 300px;
+    width: 300px;
+    position: absolute;
+    left:50%;
+}
+.leonard{
+    height: 300px;
+    width: 300px;
+    position: absolute;
+    left:30%;
+}
+.klay{
+    height: 300px;
+    width: 300px;
+    position: absolute;
+    left:10%;
 }

@@ -12,44 +12,48 @@ var loss=0;
 var box1Number=[];
 var box2Number=[];
 var box3Number=[];
-// var computerChoice4=[]
-var tally=[];
+var box4Number=[];
+var tally=0;
+var total=0;
 
 $(document).ready(function(){
 
 
 // Button1 when clicked generates a number between 1-12
-$("#one").on("click",function(){
+$(".basketball").on("click",function(){
 var boxoneguess = [(Math.floor(Math.random()* 12))+1];
-box1Number.push(boxoneguess);
+
+box1Number.push(boxoneguess)
+tally +=  + boxoneguess;
+console.log(tally);
 $("#score").text(box1Number);
 })
 
 // Button2 when clicked generates a number between 1-12
-$("#two").on("click",function(){
+$(".steph").on("click",function(){
     var boxtwoguess =[(Math.floor(Math.random()* 12))+1];
     box2Number.push(boxtwoguess);
     console.log(boxtwoguess);
     $("#score").text(boxtwoguess);
 })
 // Button3 when clicked generates a number between 1-12
-$("#three").on("click",function(){
+$(".leonard").on("click",function(){
     var boxthreeguess =[(Math.floor(Math.random()* 12))+1];
     box3Number.push(boxthreeguess);
     $("#score").text(boxthreeguess);
 })
 
-//     // Button4 when clicked generates a number between 1-12
-// $("#four").on("click",function(){
-//     var computerGuess =[(Math.floor(Math.random()* 12))+1];
-//     computerChoice4.push(computerGuess);
-// })
+// Button4 when clicked generates a number between 1-12
+$(".klay").on("click",function(){
+    var boxfourguess =[(Math.floor(Math.random()* 12))+1];
+    box4Number.push(boxfourguess);
+    $("#score").text(boxfourguess);
+})
 
 
 
-console.log(box1Number); 
+console.log(tally); 
 // console.log(boxoneguess); 
 // console.log(boxtwoguess);
 
 })
-
