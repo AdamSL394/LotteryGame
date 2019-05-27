@@ -6,30 +6,35 @@ p{
     color:white;
     font-size: 30px;
 }
-.container{
-   border: 2px solid red;
+#buckets{
+    position: absolute;
+    margin: 0 auto;
 }
 .basketball{
     height: 300px;
     width: 300px;
     position: absolute;
     left: 70%;
+    top: 500%;
 }
 .steph{
     height: 300px;
     width: 300px;
     position: absolute;
     left:50%;
+    top: 500%;
 }
 .leonard{
     height: 300px;
     width: 300px;
     position: absolute;
     left:30%;
+    top: 500%;
 }
 .klay{
     height: 300px;
     width: 300px;
     position: absolute;
     left:10%;
+    top: 500%;
 }

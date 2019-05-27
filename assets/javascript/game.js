@@ -14,9 +14,14 @@ var box2Number=[];
 var box3Number=[];
 var box4Number=[];
 var tally=0;
-var total=0;
-
+var buckets=[(Math.floor(Math.random()* 120))+1]
+console.log(buckets)
 $(document).ready(function(){
+
+
+$("#score").html(tally);
+$("#buckets").html("Get Buckets: " + buckets);
+
 
 
 // Button1 when clicked generates a number between 1-12
@@ -26,7 +31,8 @@ box1Number.push(boxoneguess)
 tally +=  + boxoneguess;
 console.log(tally);
 console.log(boxoneguess);
-$("#score").text(box1Number);
+$("#score").html(tally);
+// $("#score").text(box1Number);
 })
 // Button2 when clicked generates a number between 1-12
 $(".steph").on("click",function(){
@@ -35,7 +41,8 @@ $(".steph").on("click",function(){
     tally +=  + boxtwoguess;
     console.log(tally);
     console.log(boxtwoguess);
-    $("#score").text(boxtwoguess);
+    $("#score").html(tally);
+    // $("#score").text(boxtwoguess);
 })
 
 
@@ -44,14 +51,14 @@ $(".leonard").on("click",function(){
     var boxthreeguess =[(Math.floor(Math.random()* 12))+1];
     tally +=  + boxthreeguess;
     box3Number.push(boxthreeguess);
-    $("#score").text(boxthreeguess);
+    // $("#score").text(boxthreeguess);
 })
 
 // Button4 when clicked generates a number between 1-12
 $(".klay").on("click",function(){
     var boxfourguess =[(Math.floor(Math.random()* 12))+1];
     box4Number.push(boxfourguess);
-    $("#score").text(boxfourguess);
+    // $("#score").text(boxfourguess);
 })
 
 
