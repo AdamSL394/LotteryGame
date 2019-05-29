@@ -20,12 +20,12 @@ p{
     margin: 0 auto;
 }
 .basketball{
-    height: 150px;
-    width: 150px;
+    height: 130px;
+    width: 130px;
     position: absolute;
     right: 0px;
     left: 1050px;
-    top: 400px
+    top: 320px;
 }
 .steph{
     height: 360px;

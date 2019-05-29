@@ -20,7 +20,8 @@ var buckets=(Math.floor(Math.random()* 120))+1
 $(document).ready(function(){
 
 var basketball = $(".basketball");
-
+var steph = $(".steph");
+var leonard = $(".leonard");
 
 
 $("#buckets").html("Get Buckets: " + buckets);
@@ -32,7 +33,7 @@ function endGame(){
         wins++
         $("#buckets").text("Get Buckets: " + buckets);
         $("#wins").text("Wins: " + wins);
-        
+        $("#score").text("Your Score: " + tally);
         alert (" you win !");
     }
     if(tally > buckets){
@@ -41,7 +42,7 @@ function endGame(){
         loss++
         $("#losses").text("Losses: " + loss);
         $("#buckets").text("Get Buckets: " + buckets);
-        $("#score").text(tally)
+        $("#score").text("Your Score: " + tally);
         alert (" you lose ! ");
      } 
 }
@@ -50,7 +51,7 @@ function endGame(){
 $(".basketball").on("click",function(){
     var boxoneguess = (Math.floor(Math.random()* 12)+1);
     box1Number.push(boxoneguess)
-    tally +=   boxoneguess;
+    tally += boxoneguess;
     $("#score").html("Your Score: " + tally);
     endGame();
 })
@@ -59,9 +60,9 @@ $(".basketball").on("click",function(){
 
 // Button2 when clicked generates a number between 1-12
 $(".steph").on("click",function(){
-    var boxtwoguess =[(Math.floor(Math.random()* 12))+1];
+    var boxtwoguess =(Math.floor(Math.random()* 12)+1);
     box2Number.push(boxtwoguess);
-    tally +=  + boxtwoguess;
+    tally += boxtwoguess;
     $("#score").html("Your Score: " + tally);
     endGame(tally);
 })
@@ -69,8 +70,8 @@ $(".steph").on("click",function(){
 
 // Button3 when clicked generates a number between 1-12
 $(".leonard").on("click",function(){
-    var boxthreeguess =[(Math.floor(Math.random()* 1200))+1];
-    tally +=  + boxthreeguess;
+    var boxthreeguess =(Math.floor(Math.random()* 12))+1;
+    tally += boxthreeguess;
     box3Number.push(boxthreeguess);
     $("#score").html("Your Score: " + tally);
     endGame();
@@ -86,13 +87,34 @@ $(".klay").on("click",function(){
 })
 
 $(".basketball").on("click", function() {
-    basketball.animate({ left: "+=200px" }, "normal");
-    basketball.animate({ left: "-=200px" }, "normal");
+    basketball.animate({ top: "-=60px" }, "normal");
+    basketball.animate({ left: "+=250px" }, "normal");
+    basketball.animate({ top: "+=270px" }, "fast");
+    basketball.animate({ left: "-=250px" }, "normal");
+    basketball.animate({ top: "-=210px" }, "normal");
+
+    steph.animate({ left: "+=40px" }, "fast");
+    steph.animate({ left: "-=40px" }, "fast");
+    steph.animate({ left: "+=40px" }, "fast");
+    steph.animate({ left: "-=40px" }, "fast");
+    steph.animate({ left: "+=40px" }, "fast");
+    steph.animate({ left: "-=40px" }, "fast");
+    steph.animate({ left: "+=40px" }, "fast");
+    steph.animate({ left: "-=40px" }, "fast");
   });
 
-  $(".step").on("click", function() {
-    basketball.animate({ left: "+=20px" }, "normal");
-    basketball.animate({ left: "-=20px" }, "normal");
+  $(".steph").on("click", function() {
+    steph.animate({ left: "+=40px" }, "fast");
+    steph.animate({ left: "-=40px" }, "fast");
+    steph.animate({ left: "+=40px" }, "fast");
+    steph.animate({ left: "-=40px" }, "fast");
+    steph.animate({ left: "+=40px" }, "fast");
+    steph.animate({ left: "-=40px" }, "fast");
+  });
+
+  $(".leonard").on("click", function() {
+    leonard.animate({ top: "-=100px" }, "normal");
+    leonard.animate({ top: "+=100px" }, "normal");
   });
 
 
