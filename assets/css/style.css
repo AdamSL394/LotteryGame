@@ -1,6 +1,11 @@
-body{
-    background-color: black;
+html{
+    height: 800px;
+}
+#court{
+    background-image: url("https://akronaviators.com/wp-content/uploads/2018/10/basketball-court.jpg");
     position: relative;
+    background-repeat: no-repeat;
+    height: 750px;
 }
 p{
     color:white;
@@ -11,30 +16,63 @@ p{
     margin: 0 auto;
 }
 .basketball{
-    height: 300px;
-    width: 300px;
+    height: 150px;
+    width: 150px;
     position: absolute;
-    left: 70%;
-    top: 500%;
+    right: 0px;
+    left: 1050px;
+    top: 400px
 }
 .steph{
-    height: 300px;
+    height: 360px;
     width: 300px;
     position: absolute;
-    left:50%;
-    top: 500%;
+    right: 0px;
+    left: 0px;
+    top: 405px;
 }
 .leonard{
-    height: 300px;
+    height: 470px;
     width: 300px;
     position: absolute;
-    left:30%;
-    top: 500%;
+    right: 0px;
+    left: 300px;
+    top: 315px;
 }
 .klay{
-    height: 300px;
+    height: 340px;
     width: 300px;
     position: absolute;
-    left:10%;
-    top: 500%;
+    right: 0px;
+    left: 600px;
+    top: 415px;
+}
+#score{
+    position: absolute;
+    color: white;
+    left: 1100px;
+    top: 770px;
+}
+#buckets{
+    position: absolute;
+    color: white;
+    left: 700px;
+    top: 770px;
+}
+#wins{
+    position: absolute;
+    color: white;
+    left: 100px;
+    top: 770px;
+}
+#losses{
+    position: absolute;
+    color: white;
+    left: 400px;
+    top: 770px;
+}
+#footer{
+
+    height: 73px;
+    background-color: black;
 }
