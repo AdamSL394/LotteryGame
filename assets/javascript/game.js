@@ -21,65 +21,59 @@ $(document).ready(function(){
 
 var basketball = $(".basketball");
 
-$("#losses").html(loss);
-$("#score").html(tally);
+
+
 $("#buckets").html("Get Buckets: " + buckets);
 
 function endGame(){
     if (tally === buckets){
         tally=0;
-        buckets=(Math.floor(Math.random()* 120));
+        buckets=(Math.floor(Math.random()* 120))+1
         wins++
-        console.log(wins);
-        prompt (" you win !");
+        $("#buckets").text("Get Buckets: " + buckets);
+        $("#wins").text("Wins: " + wins);
+        
+        alert (" you win !");
     }
     if(tally > buckets){
         tally=0;
         buckets=(Math.floor(Math.random()* 120))+1
         loss++
-        console.log(loss);
-        prompt (" you lose ! ");
-     }//else{
-    //     continue
-    // }
+        $("#losses").text("Losses: " + loss);
+        $("#buckets").text("Get Buckets: " + buckets);
+        $("#score").text(tally)
+        alert (" you lose ! ");
+     } 
 }
 
 // Button1 when clicked generates a number between 1-12
-
-
-
 $(".basketball").on("click",function(){
-    var boxoneguess = [(Math.floor(Math.random()* 12))+1];
-    
+    var boxoneguess = (Math.floor(Math.random()* 12)+1);
     box1Number.push(boxoneguess)
-    tally +=  + boxoneguess;
-    $("#score").html(tally);
+    tally +=   boxoneguess;
+    $("#score").html("Your Score: " + tally);
     endGame();
-
 })
 
 
 
 // Button2 when clicked generates a number between 1-12
 $(".steph").on("click",function(){
-    
     var boxtwoguess =[(Math.floor(Math.random()* 12))+1];
     box2Number.push(boxtwoguess);
     tally +=  + boxtwoguess;
-    $("#score").html(tally);
+    $("#score").html("Your Score: " + tally);
     endGame(tally);
-    console.log(boxtwoguess);
 })
 
 
 // Button3 when clicked generates a number between 1-12
 $(".leonard").on("click",function(){
-    var boxthreeguess =[(Math.floor(Math.random()* 12))+1];
+    var boxthreeguess =[(Math.floor(Math.random()* 1200))+1];
     tally +=  + boxthreeguess;
     box3Number.push(boxthreeguess);
-    $("#score").html(tally);
+    $("#score").html("Your Score: " + tally);
     endGame();
-    // $("#score").text(boxthreeguess);
 })
 
 // Button4 when clicked generates a number between 1-12
@@ -87,17 +81,19 @@ $(".klay").on("click",function(){
     var boxfourguess =1
     box4Number.push(boxfourguess);
     tally +=  1;
-    $("#score").html(tally);
+    $("#score").html("Your Score: " + tally);
     endGame();
-    // $("#score").text(boxfourguess);
-    
 })
 
-// $(".basketball").on("click", function() {
-//     basketball.animate({ left: "+=200px" }, "normal");
-//   });
-// console.log(wins)
-// console.log(loss)
+$(".basketball").on("click", function() {
+    basketball.animate({ left: "+=200px" }, "normal");
+    basketball.animate({ left: "-=200px" }, "normal");
+  });
+
+  $(".step").on("click", function() {
+    basketball.animate({ left: "+=20px" }, "normal");
+    basketball.animate({ left: "-=20px" }, "normal");
+  });
 
 
 })

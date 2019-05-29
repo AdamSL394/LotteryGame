@@ -7,6 +7,10 @@ html{
     background-repeat: no-repeat;
     height: 750px;
 }
+#rules{
+    margin-left: 120px;
+    color: blue;
+}
 p{
     color:white;
     font-size: 30px;
